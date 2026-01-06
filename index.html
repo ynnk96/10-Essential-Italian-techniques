@@ -12,539 +12,712 @@
         }
         
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
             color: #2c3e50;
-            background: #fdfbf7;
+            background: #ffffff;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 40px;
         }
         
         header {
-            text-align: center;
-            padding: 60px 20px 40px;
             background: linear-gradient(135deg, #0055A4 0%, #C60C30 50%, #F1BF00 100%);
             color: white;
-            margin-bottom: 50px;
+            padding: 80px 40px;
+            text-align: center;
         }
         
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            font-weight: normal;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
         
         header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.3em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
         }
 
-        .flag-badges {
+        .badge-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
 
-        .flag-badge {
-            background: white;
-            color: #0055A4;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
+        .badge {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.95em;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background: #fafafa;
         }
         
         .intro {
             text-align: center;
-            margin-bottom: 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .intro h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #0055A4;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
         }
         
         .intro p {
-            font-size: 1.1em;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 15px;
-        }
-
-        .value-prop {
-            background: linear-gradient(135deg, #f8f5f0 0%, #e8e3d8 100%);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 50px;
-            border-left: 5px solid #C60C30;
-        }
-
-        .value-prop h3 {
-            color: #C60C30;
-            font-size: 1.6em;
+            font-size: 1.15em;
+            color: #666;
             margin-bottom: 20px;
+            line-height: 1.8;
         }
 
-        .value-prop p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #444;
+        .intro strong {
+            color: #1a1a1a;
         }
 
         .lead-magnets {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
 
         .lead-magnet-card {
-            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
-            color: white;
-            padding: 40px;
+            background: white;
+            padding: 50px 40px;
             border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .lead-magnet-card:nth-child(2) {
-            background: linear-gradient(135deg, #C60C30 0%, #8B0000 100%);
+        .lead-magnet-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #009246 0%, #CE2B37 100%);
+        }
+
+        .lead-magnet-card:nth-child(2):before {
+            background: linear-gradient(90deg, #AA151B 0%, #F1BF00 100%);
         }
 
         .lead-magnet-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+            border-color: #1a1a1a;
         }
 
         .lead-magnet-card h3 {
             font-size: 1.8em;
             margin-bottom: 15px;
+            color: #1a1a1a;
+            font-weight: 600;
         }
 
         .lead-magnet-card p {
+            font-size: 1.05em;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .lead-magnet-card strong {
+            color: #1a1a1a;
             font-size: 1.1em;
-            margin-bottom: 25px;
-            opacity: 0.95;
         }
 
-        .lead-magnet-card .cta-button {
-            background: white;
-            color: #2d5016;
-            font-weight: bold;
-        }
-
-        .lead-magnet-card:nth-child(2) .cta-button {
-            color: #C60C30;
-        }
-
-        .lead-magnet-card .cta-button:hover {
-            background: #f0f0f0;
+        .cta-button {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 10px;
         }
         
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
         }
 
-        .services-header {
+        .product-showcase {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 16px;
+            margin: 80px 0;
+        }
+
+        .product-showcase h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
             text-align: center;
+            font-weight: 600;
+        }
+
+        .product-showcase > p {
+            text-align: center;
+            font-size: 1.2em;
+            opacity: 0.9;
             margin-bottom: 40px;
         }
 
-        .services-header h2 {
-            font-size: 2em;
-            color: #0055A4;
-            margin-bottom: 15px;
+        .product-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .product-includes {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .product-includes h3 {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .product-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-includes li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .product-includes li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .price-tag {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .price-tag .price {
+            font-size: 3em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .price-tag .subtext {
+            font-size: 1em;
+            opacity: 0.8;
+        }
+
+        .product-cta {
+            text-align: center;
+        }
+
+        .product-cta .cta-button {
+            background: white;
+            color: #1a1a1a;
+            font-size: 1.2em;
+            padding: 18px 50px;
+        }
+
+        .product-cta .cta-button:hover {
+            background: #f0f0f0;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .services-section > p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 60px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
         
         .service-card {
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-            border-top: 4px solid #0055A4;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: #1a1a1a;
         }
         
         .service-card h3 {
-            color: #C60C30;
+            color: #1a1a1a;
             margin-bottom: 15px;
-            font-size: 1.4em;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .service-card > p {
+            color: #666;
+            margin-bottom: 20px;
         }
         
         .service-card ul {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
         .service-card li {
-            padding: 8px 0;
+            padding: 10px 0;
             padding-left: 25px;
             position: relative;
+            color: #555;
+            line-height: 1.6;
         }
         
         .service-card li:before {
-            content: "✓";
+            content: "•";
             position: absolute;
             left: 0;
-            color: #0055A4;
+            color: #1a1a1a;
             font-weight: bold;
+            font-size: 1.5em;
         }
         
         .pricing {
             background: white;
-            padding: 40px;
-            border-radius: 8px;
+            padding: 60px 40px;
+            border-radius: 12px;
             text-align: center;
-            margin-bottom: 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
         }
         
         .pricing h2 {
-            color: #0055A4;
-            margin-bottom: 30px;
-            font-size: 2em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        .pricing .launch-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 40px;
         }
         
         .price-options {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .price-box {
-            padding: 25px 35px;
-            border: 2px solid #0055A4;
-            border-radius: 8px;
-            min-width: 200px;
+            padding: 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            min-width: 220px;
+            transition: all 0.3s ease;
+        }
+
+        .price-box:hover {
+            border-color: #1a1a1a;
+            transform: translateY(-3px);
         }
         
         .price-box .duration {
             font-size: 1.1em;
-            color: #555;
-            margin-bottom: 10px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
         
         .price-box .price {
-            font-size: 2.2em;
-            color: #C60C30;
-            font-weight: bold;
+            font-size: 2.5em;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        
-        .cta-button {
-            display: inline-block;
-            background: #C60C30;
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background 0.3s ease;
-            margin-top: 20px;
-        }
-        
-        .cta-button:hover {
-            background: #8B0000;
+
+        .price-box .old-price {
+            font-size: 1em;
+            color: #999;
+            text-decoration: line-through;
         }
         
         .about {
-            background: #f8f5f0;
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 50px;
-        }
-        
-        .about h2 {
-            color: #0055A4;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .about p {
-            margin-bottom: 15px;
-            font-size: 1.05em;
+            background: #fafafa;
+            padding: 60px;
+            border-radius: 12px;
         }
 
-        .authentic-badges {
+        .badge-row {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
 
-        .authentic-badge {
+        .about-badge {
             display: inline-block;
-            background: #0055A4;
+            background: #1a1a1a;
             color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
+            padding: 8px 18px;
+            border-radius: 20px;
             font-size: 0.85em;
-            font-weight: bold;
+            font-weight: 600;
+        }
+        
+        .about h2 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+        
+        .about p {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
         }
 
-        .authentic-badge.spanish {
-            background: #C60C30;
+        .about strong {
+            color: #1a1a1a;
         }
         
         .testimonials {
-            margin-bottom: 50px;
+            text-align: center;
         }
         
         .testimonials h2 {
-            text-align: center;
-            color: #0055A4;
+            color: #1a1a1a;
             margin-bottom: 40px;
-            font-size: 2em;
+            font-size: 2.2em;
+            font-weight: 600;
         }
         
-        .testimonial {
+        .testimonial-box {
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            font-style: italic;
-            border-left: 4px solid #C60C30;
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        
-        .testimonial-author {
-            text-align: right;
-            margin-top: 15px;
-            font-style: normal;
-            color: #0055A4;
-            font-weight: bold;
+
+        .testimonial-box p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-box strong {
+            color: #1a1a1a;
+            font-size: 1.2em;
+            display: block;
+            margin: 25px 0 15px;
+        }
+
+        .testimonial-box .highlight {
+            color: #4CAF50;
+            font-weight: 600;
         }
         
         footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #2c3e50;
+            background: #1a1a1a;
             color: white;
+            text-align: center;
+            padding: 60px 40px;
         }
         
         .contact-info {
-            margin: 20px 0;
+            margin: 30px 0;
+            font-size: 1.05em;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            opacity: 0.9;
         }
         
         .contact-info a {
-            color: #F1BF00;
+            color: white;
             text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.3s;
+        }
+
+        .contact-info a:hover {
+            border-bottom-color: white;
         }
         
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
             }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
             
-            .price-options {
-                flex-direction: column;
-                align-items: center;
+            .intro h2,
+            .services-section h2,
+            .testimonials h2 {
+                font-size: 2em;
             }
 
             .lead-magnets {
                 grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-options {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Master Mediterranean Cuisine</h1>
-        <p>Learn authentic Italian and Spanish cooking techniques from a professional chef in Barcelona</p>
-        <div class="flag-badges">
-            <div class="flag-badge">🇮🇹 Italian Heritage</div>
-            <div class="flag-badge">🇪🇸 Barcelona Based</div>
+        <div class="container">
+            <h1>Master Mediterranean Cuisine</h1>
+            <p>Learn authentic Italian and Spanish cooking from a professional chef with Michelin kitchen experience</p>
         </div>
     </header>
 
-    <div class="container">
-        <section class="intro">
-            <h2>Two Great Cuisines, One Expert Chef</h2>
-            <p>I'm an Italian chef working in Barcelona, where I've mastered both the cuisine of my heritage and the incredible Spanish culinary traditions that surround me.</p>
-            <p>This unique position gives me authentic expertise in both Italian and Spanish cooking - not from books, but from living, cooking, and working professionally in both cultures.</p>
-            <p><strong>When you want to learn real Mediterranean cooking, learn from someone who lives it every day.</strong></p>
-        </section>
-
-        <section class="lead-magnets">
-            <div class="lead-magnet-card">
-                <h3>🇮🇹 Free Italian Guide</h3>
-                <p><strong>10 Essential Italian Techniques</strong></p>
-                <p>Master fresh pasta, risotto, ragù, authentic sauces, and the fundamentals of Italian cooking</p>
-                <a href="mailto:authenticmedcuisine@gmail.com?subject=Send me the Italian Techniques Guide" class="cta-button">Download Italian Guide</a>
-            </div>
-            <div class="lead-magnet-card">
-                <h3>🇪🇸 Free Spanish Guide</h3>
-                <p><strong>10 Essential Spanish Techniques</strong></p>
-                <p>Perfect paella, tortilla, sofrito, seafood, and the core techniques of Spanish cuisine</p>
-                <a href="mailto:authenticmedcuisine@gmail.com?subject=Send me the Spanish Techniques Guide" class="cta-button">Download Spanish Guide</a>
-            </div>
-        </section>
-
-        <section style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 60px 40px; border-radius: 12px; margin-bottom: 60px; text-align: center; box-shadow: 0 6px 30px rgba(0,0,0,0.2);">
-            <h2 style="color: white; font-size: 2.2em; margin-bottom: 20px;">🔥 Mediterranean Cooking Template Bundle</h2>
-            <p style="font-size: 1.3em; margin-bottom: 15px; opacity: 0.95;"><strong>Everything you need to cook like a professional at home</strong></p>
-            <p style="font-size: 1.1em; margin-bottom: 30px; opacity: 0.9;">6 comprehensive guides with 100+ pages of professional kitchen systems, techniques, and planning tools</p>
-            
-            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 8px; margin: 30px auto; max-width: 600px; backdrop-filter: blur(10px);">
-                <p style="font-size: 1.05em; text-align: left; margin-bottom: 15px;"><strong>What's included:</strong></p>
-                <ul style="text-align: left; list-style: none; padding-left: 0;">
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Professional Mise en Place Checklist</li>
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Kitchen Organization Guide (restaurant systems for home)</li>
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Dinner Party Prep Schedules (stress-free entertaining)</li>
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Complete Mediterranean Shopping Lists (Italian & Spanish)</li>
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Flavor Pairing Guide (traditional combinations that work)</li>
-                    <li style="padding: 8px 0; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #F1BF00;">✓</span> Seasonal Menu Planner (Italian & Spanish dishes by season)</li>
-                </ul>
+    <section>
+        <div class="container">
+            <div class="intro">
+                <h2>Two Cuisines, One Expert Chef</h2>
+                <p>I'm Manuel, an Italian chef working in Barcelona. I've trained in Michelin-starred kitchens across Italy and Spain, giving me authentic expertise in both Italian and Spanish cooking.</p>
+                <p>This unique background means you're learning from someone who understands both cuisines at a professional level - not from books, but from years of hands-on experience in world-class kitchens.</p>
+                <p><strong>When you want to learn real Mediterranean cooking, learn from someone who lives it every day.</strong></p>
             </div>
 
-            <p style="font-size: 1.8em; margin: 30px 0 20px; font-weight: bold; color: #F1BF00;">€29</p>
-            <p style="font-size: 0.95em; margin-bottom: 30px; opacity: 0.85;">Instant download • Print-friendly PDFs • Use forever</p>
-            
-            <a href="https://authenticchef.gumroad.com/l/vfmzu" class="cta-button" style="background: #F1BF00; color: #2c3e50; font-size: 1.3em; padding: 18px 50px;">Get the Bundle Now</a>
-            
-            <p style="font-size: 0.9em; margin-top: 25px; opacity: 0.8;">Secure payment via Gumroad • Instant download</p>
-        </section>
-
-        <section class="value-prop">
-            <h3>Why Mediterranean Cooking Matters</h3>
-            <p>Italian and Spanish cuisines share the same Mediterranean philosophy - respect for ingredients, seasonal cooking, simple preparations that let quality shine - but each has unique techniques and traditions.</p>
-            <p>Understanding both gives you the complete picture of Mediterranean cooking. You'll see how similar ingredients are treated differently, how techniques overlap and diverge, and how to bring the best of both worlds into your own kitchen.</p>
-        </section>
-
-        <div class="services-header">
-            <h2>What You'll Learn</h2>
-            <p style="color: #666; max-width: 600px; margin: 0 auto;">Personalized video consultations covering authentic Italian and Spanish techniques</p>
+            <div class="lead-magnets">
+                <div class="lead-magnet-card">
+                    <h3>🇮🇹 Italian Techniques</h3>
+                    <p><strong>Free Guide: 10 Essential Italian Techniques</strong></p>
+                    <p>Master fresh pasta, risotto, ragù, authentic sauces, and the fundamentals of Italian cooking from someone who learned them in Italy.</p>
+                    <a href="https://forms.gle/4j4cxZFEh5Bd314a9" class="cta-button">Get Italian Guide</a>
+                </div>
+                <div class="lead-magnet-card">
+                    <h3>🇪🇸 Spanish Techniques</h3>
+                    <p><strong>Free Guide: 10 Essential Spanish Techniques</strong></p>
+                    <p>Perfect paella, tortilla, sofrito, seafood preparation, and the core techniques of Spanish cuisine from a chef working in Barcelona.</p>
+                    <a href="https://forms.gle/NsYCNiLNkTe2bK938" class="cta-button">Get Spanish Guide</a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <section class="services">
-            <div class="service-card">
-                <h3>Italian Mastery</h3>
-                <p>Authentic techniques from Italian heritage</p>
-                <ul>
-                    <li>Fresh pasta making (traditional methods)</li>
-                    <li>Risotto technique and timing</li>
-                    <li>Regional Italian sauces</li>
-                    <li>Ragù, soffritto, and flavor building</li>
-                    <li>Proper use of Italian ingredients</li>
-                    <li>Regional Italian cooking styles</li>
-                </ul>
-            </div>
+    <section>
+        <div class="container">
+            <div class="product-showcase">
+                <h2>Mediterranean Cooking Template Bundle</h2>
+                <p>Everything you need to cook like a professional at home</p>
+                
+                <div class="product-content">
+                    <div class="product-includes">
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Professional Mise en Place Checklist</li>
+                            <li>Kitchen Organization Guide (restaurant systems for home)</li>
+                            <li>Dinner Party Prep Schedules (stress-free entertaining)</li>
+                            <li>Complete Mediterranean Shopping Lists (Italian & Spanish)</li>
+                            <li>Flavor Pairing Guide (traditional combinations that work)</li>
+                            <li>Seasonal Menu Planner (Italian & Spanish dishes by season)</li>
+                        </ul>
+                    </div>
 
-            <div class="service-card">
-                <h3>Spanish Excellence</h3>
-                <p>Living in Barcelona, mastering Spanish cuisine</p>
-                <ul>
-                    <li>Authentic paella and rice dishes</li>
-                    <li>Spanish tortilla perfection</li>
-                    <li>Sofrito and Spanish flavor bases</li>
-                    <li>Seafood preparation and grilling</li>
-                    <li>Spanish ingredients (pimentón, saffron)</li>
-                    <li>Regional Spanish specialties</li>
-                </ul>
-            </div>
+                    <div class="price-tag">
+                        <div class="price">€29</div>
+                        <p class="subtext">100+ pages • Instant download • Print-friendly PDFs</p>
+                    </div>
 
-            <div class="service-card">
-                <h3>Mediterranean Integration</h3>
-                <p>Understanding how both cuisines work together</p>
-                <ul>
-                    <li>Similarities and differences explained</li>
-                    <li>Ingredient substitutions between cuisines</li>
-                    <li>Menu planning with both styles</li>
-                    <li>Seasonal Mediterranean cooking</li>
-                    <li>Recipe troubleshooting for both</li>
-                    <li>Professional kitchen techniques</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="pricing">
-            <h2>Investment</h2>
-            <p style="color: #C60C30; font-weight: bold; margin-bottom: 20px;">LAUNCH OFFER - First 10 Clients Only</p>
-            <div class="price-options">
-                <div class="price-box">
-                    <div class="duration">30 Minutes</div>
-                    <div class="price">€25</div>
-                    <p style="font-size: 0.9em; color: #999; margin-top: 10px;"><s>Regular €50</s></p>
-                </div>
-                <div class="price-box">
-                    <div class="duration">60 Minutes</div>
-                    <div class="price">€45</div>
-                    <p style="font-size: 0.9em; color: #999; margin-top: 10px;"><s>Regular €90</s></p>
+                    <div class="product-cta">
+                        <a href="https://authenticchef.gumroad.com/l/vfmzu" class="cta-button">Get the Bundle Now</a>
+                        <p style="margin-top: 20px; opacity: 0.8; font-size: 0.95em;">Secure payment via Gumroad • Instant download</p>
+                    </div>
                 </div>
             </div>
-            <p style="color: #666; margin-bottom: 10px;">All sessions via video call - Italian, Spanish, or both cuisines</p>
-            <p style="color: #666; margin-bottom: 20px;">Follow-up materials, recipes, and techniques included</p>
-            <a href="mailto:authenticmedcuisine@gmail.com?subject=Book Mediterranean Cooking Consultation" class="cta-button">Book Your Consultation</a>
-        </section>
+        </div>
+    </section>
 
-        <section class="about">
-          
+    <section class="section-light">
+        <div class="container services-section">
+            <h2>Work With Me</h2>
+            <p>Personalized video consultations covering authentic Italian and Spanish techniques</p>
+
+            <div class="services">
+                <div class="service-card">
+                    <h3>Italian Mastery</h3>
+                    <p>Authentic techniques from Italian heritage</p>
+                    <ul>
+                        <li>Fresh pasta making (traditional methods)</li>
+                        <li>Risotto technique and timing</li>
+                        <li>Regional Italian sauces</li>
+                        <li>Ragù, soffritto, and flavor building</li>
+                        <li>Proper use of Italian ingredients</li>
+                        <li>Regional Italian cooking styles</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Spanish Excellence</h3>
+                    <p>Living in Barcelona, mastering Spanish cuisine</p>
+                    <ul>
+                        <li>Authentic paella and rice dishes</li>
+                        <li>Spanish tortilla perfection</li>
+                        <li>Sofrito and Spanish flavor bases</li>
+                        <li>Seafood preparation and grilling</li>
+                        <li>Spanish ingredients (pimentón, saffron)</li>
+                        <li>Regional Spanish specialties</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Mediterranean Integration</h3>
+                    <p>Understanding how both cuisines work together</p>
+                    <ul>
+                        <li>Similarities and differences explained</li>
+                        <li>Ingredient substitutions between cuisines</li>
+                        <li>Menu planning with both styles</li>
+                        <li>Seasonal Mediterranean cooking</li>
+                        <li>Recipe troubleshooting for both</li>
+                        <li>Professional kitchen techniques</li>
+                    </ul>
+                </div>
             </div>
-            <h2>About Manuel - Your Chef</h2>
-            <p>I'm Manuel, an Italian chef with over 8 years of professional experience working in Michelin-starred restaurants across Italy and Spain.</p>
-            
-            <p><strong>My Background:</strong></p>
-            <p>I trained in some of Italy's most prestigious kitchens, including a 3-Michelin-star restaurant in Piedmont and multiple 1-star establishments. I've worked as Sous Chef in Barcelona and Chef de Partie in Italy, handling everything from fresh pasta preparation to coordinating high-pressure services.</p>
-            
-            <p>Living in Barcelona since 2021, I've gained deep expertise in Spanish cuisine while maintaining my Italian culinary roots. This gives me a unique perspective on Mediterranean cooking - I understand both traditions authentically, at the highest professional level.</p>
-            
-            <p><strong>Why learn from me?</strong> I've worked in Michelin kitchens where precision, technique, and understanding the "why" behind every step is essential. Now I teach these same techniques to home cooks and aspiring chefs, breaking down complex restaurant methods into achievable steps.</p>
-            
-            <p>Whether you want to master Italian pasta-making, perfect Spanish paella, or understand the fundamentals of Mediterranean cooking, I bring real professional experience from world-class kitchens to help you improve.</p>
-        </section>
+        </div>
+    </section>
 
-        <section class="testimonials">
+    <section>
+        <div class="container">
+            <div class="pricing">
+                <h2>Video Consultations</h2>
+                <div class="launch-badge">LAUNCH OFFER - First 10 Clients Only</div>
+                
+                <div class="price-options">
+                    <div class="price-box">
+                        <div class="duration">30 Minutes</div>
+                        <div class="price">€25</div>
+                        <div class="old-price">Regular €50</div>
+                    </div>
+                    <div class="price-box">
+                        <div class="duration">60 Minutes</div>
+                        <div class="price">€45</div>
+                        <div class="old-price">Regular €90</div>
+                    </div>
+                </div>
+                
+                <p style="color: #666; margin-bottom: 15px;">All sessions via video call - Italian, Spanish, or both cuisines</p>
+                <p style="color: #666; margin-bottom: 30px;">Follow-up materials, recipes, and techniques included</p>
+                <a href="mailto:authenticmedcuisine@gmail.com?subject=Book Mediterranean Cooking Consultation" class="cta-button">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="about">
+                <h2>About Me</h2>
+                <p>I'm Manuel, an Italian chef with over 8 years of professional experience working in Michelin-starred restaurants across Italy and Spain.</p>
+                
+                <p><strong>My Background:</strong> I trained in some of Italy's most prestigious kitchens, including a 3-Michelin-star restaurant in Piedmont and multiple 1-star establishments. I've worked as Sous Chef in Barcelona and Chef de Partie in Italy, handling everything from fresh pasta preparation to coordinating high-pressure services.</p>
+                
+                <p>Living in Barcelona since 2021, I've gained deep expertise in Spanish cuisine while maintaining my Italian culinary roots. This gives me a unique perspective on Mediterranean cooking - I understand both traditions authentically, at the highest professional level.</p>
+                
+                <p><strong>Why learn from me?</strong> I've worked in Michelin kitchens where precision, technique, and understanding the "why" behind every step is essential. Now I teach these same techniques to home cooks and aspiring chefs, breaking down complex restaurant methods into achievable steps.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container testimonials">
             <h2>Launch Offer - Limited Spots</h2>
-            <div class="testimonial" style="border-left: 4px solid #0055A4;">
-                <p style="font-style: normal; text-align: center; font-size: 1.1em;">I'm launching this consulting service and looking for my first students. To build credibility and refine my teaching approach, I'm offering a significant discount for early clients.</p>
-                <p style="font-style: normal; text-align: center; margin-top: 20px;"><strong>First 10 Clients: 50% Off</strong></p>
-                <p style="font-style: normal; text-align: center;">€25 for 30 minutes | €45 for 60 minutes</p>
-                <p style="font-style: normal; text-align: center; margin-top: 15px; color: #666; font-size: 0.95em;">In exchange, I ask for honest feedback and permission to use your testimonial on this site (first name only). This helps me improve and helps future students know what to expect.</p>
+            <div class="testimonial-box">
+                <p>I'm launching this consulting service and looking for my first students. To build credibility and refine my teaching approach, I'm offering a significant discount for early clients.</p>
+                <strong class="highlight">First 10 Clients: 50% Off</strong>
+                <p style="margin-top: 20px;">€25 for 30 minutes | €45 for 60 minutes</p>
+                <p style="font-size: 1em; color: #666;">In exchange, I ask for honest feedback and permission to use your testimonial on this site. This helps me improve and helps future students know what to expect.</p>
+                <p style="margin-top: 30px;"><strong>Only 10 spots available at launch pricing</strong></p>
             </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <p style="color: #C60C30; font-weight: bold; font-size: 1.1em;">Limited to 10 consultations - Book now to secure launch pricing</p>
-            </div>
-        </section>
-
-        <section style="text-align: center; background: linear-gradient(135deg, #f8f5f0 0%, #e8e3d8 100%); padding: 50px 40px; border-radius: 12px; margin-bottom: 50px;">
-            <h2 style="color: #0055A4; margin-bottom: 25px; font-size: 2em;">Ready to Master Mediterranean Cuisine?</h2>
-            <p style="font-size: 1.15em; margin-bottom: 30px; color: #555;">Start with our free technique guides</p>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-                <a href="mailto:authenticmedcuisine@gmail.com?subject=Send me the Italian Techniques Guide" class="cta-button" style="background: #2d5016;">Get Italian Guide</a>
-                <a href="mailto:authenticmedcuisine@gmail.com?subject=Send me the Spanish Techniques Guide" class="cta-button">Get Spanish Guide</a>
-            </div>
-            <p style="margin-top: 20px; color: #666;">Or book a personalized consultation:</p>
-            <a href="mailto:authenticmedcuisine@gmail.com?subject=Book Mediterranean Cooking Consultation" class="cta-button" style="background: #0055A4; margin-top: 15px;">Book Consultation</a>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="contact-info">
-            <p>📧 <a href="mailto:authenticmedcuisine@gmail.com">authenticmedcuisine@gmail.com</a></p>
-            <p>📍 Based in Barcelona, Spain</p>
-            <p>🌐 Video consultations available worldwide</p>
-          
+        <div class="container">
+            <div class="contact-info">
+                <p>📧 <a href="mailto:authenticmedcuisine@gmail.com">authenticmedcuisine@gmail.com</a></p>
+            </div>
         </div>
-        <p style="margin-top: 30px; opacity: 0.8;">© 2026 Mediterranean Chef Consulting</p>
     </footer>
 </body>
 </html>
