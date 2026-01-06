@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Chef Consulting - Authentic Italian Cooking Techniques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fdfbf7;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .flag-badge {
+            display: inline-block;
+            background: white;
+            color: #2d5016;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .intro h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2d5016;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 15px;
+        }
+
+        .value-prop {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e3d8 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            border-left: 5px solid #2d5016;
+        }
+
+        .value-prop h3 {
+            color: #2d5016;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+
+        .value-prop p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4a7c2c;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        
+        .service-card h3 {
+            color: #2d5016;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4a7c2c;
+            font-weight: bold;
+        }
+        
+        .pricing {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .pricing h2 {
+            color: #2d5016;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .price-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .price-box {
+            padding: 25px 35px;
+            border: 2px solid #4a7c2c;
+            border-radius: 8px;
+            min-width: 200px;
+        }
+        
+        .price-box .duration {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .price-box .price {
+            font-size: 2.2em;
+            color: #2d5016;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #2d5016;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background: #4a7c2c;
+        }
+
+        .lead-magnet {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .lead-magnet h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .lead-magnet p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .lead-magnet .cta-button {
+            background: white;
+            color: #2d5016;
+            font-weight: bold;
+        }
+
+        .lead-magnet .cta-button:hover {
+            background: #f0f0f0;
+        }
+        
+        .about {
+            background: #f8f5f0;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+        
+        .about h2 {
+            color: #2d5016;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .authentic-badge {
+            display: inline-block;
+            background: #2d5016;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .testimonials {
+            margin-bottom: 50px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            color: #2d5016;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            font-style: italic;
+            border-left: 4px solid #4a7c2c;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            margin-top: 15px;
+            font-style: normal;
+            color: #2d5016;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+        }
+        
+        .contact-info a {
+            color: #4a7c2c;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .price-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn Authentic Italian Cooking</h1>
+        <p>Master traditional Italian techniques with personalized video consultations from a professional Italian chef</p>
+        <div class="flag-badge">🇮🇹 Native Italian Chef</div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>From Italy to Your Kitchen</h2>
+            <p>Most Italian cooking tutorials are created by non-Italians who learned from books and blogs. That's not how Italian cooking works.</p>
+            <p>I'm a professional Italian chef currently working in Barcelona. I learned these techniques in Italy, from Italian chefs and home cooks, the way they've been passed down for generations.</p>
+            <p><strong>When you want to learn authentic Italian cooking, learn from an Italian.</strong></p>
+        </section>
+
+        <section class="lead-magnet">
+            <h2>🎁 Free Guide: 10 Essential Italian Techniques</h2>
+            <p>Before you book a consultation, download my comprehensive guide covering the fundamental techniques every home cook should master - from fresh pasta to risotto to building authentic flavor.</p>
+            <a href="mailto:your.email@example.com?subject=Send me the Italian Techniques Guide" class="cta-button">Download Free Guide</a>
+        </section>
+
+        <section class="value-prop">
+            <h3>Why Learn From an Italian Chef?</h3>
+            <p>Italian cooking isn't just recipes - it's techniques, intuition, and understanding that can only come from growing up in the culture. I don't just know how to make pasta; I understand why the dough should feel a certain way, when to add pasta water, how to recognize al dente by feel, not a timer.</p>
+            <p>This is what you get when you work with someone who learned Italian cooking in Italy - not someone who studied it from afar.</p>
+        </section>
+
+        <section class="services">
+            <div class="service-card">
+                <h3>Master Italian Techniques</h3>
+                <p>Learn the fundamentals that make Italian cooking authentic</p>
+                <ul>
+                    <li>Fresh pasta making (the real way)</li>
+                    <li>Risotto technique and timing</li>
+                    <li>Authentic tomato sauces</li>
+                    <li>Ragù bolognese (the 3-hour method)</li>
+                    <li>Using Italian ingredients properly</li>
+                    <li>Building Italian flavor profiles</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Recipe Troubleshooting</h3>
+                <p>Fix what's going wrong with your Italian cooking</p>
+                <ul>
+                    <li>Why your pasta dough isn't working</li>
+                    <li>Getting risotto creamy without cream</li>
+                    <li>Making sauces that actually cling to pasta</li>
+                    <li>Understanding al dente cooking</li>
+                    <li>When to use Parmigiano (and when not to)</li>
+                    <li>Authentic Italian flavor combinations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Mediterranean Cuisine</h3>
+                <p>Living in Barcelona, I also work with Spanish techniques</p>
+                <ul>
+                    <li>Italian vs Spanish approaches to similar ingredients</li>
+                    <li>Mediterranean cooking philosophy</li>
+                    <li>Spanish techniques and dishes</li>
+                    <li>Finding Italian ingredients in Spain</li>
+                    <li>Cross-cultural recipe adaptation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Investment</h2>
+            <div class="price-options">
+                <div class="price-box">
+                    <div class="duration">30 Minutes</div>
+                    <div class="price">€50</div>
+                </div>
+                <div class="price-box">
+                    <div class="duration">60 Minutes</div>
+                    <div class="price">€90</div>
+                </div>
+            </div>
+            <p style="color: #666; margin-bottom: 10px;">All sessions conducted via video call at a time that works for you</p>
+            <p style="color: #666; margin-bottom: 20px;">Follow-up materials, recipes, and guidance included</p>
+            <a href="mailto:your.email@example.com?subject=Book Italian Cooking Consultation" class="cta-button">Book Your Consultation</a>
+        </section>
+
+        <section class="about">
+            <div class="authentic-badge">AUTHENTIC ITALIAN</div>
+            <h2>About Your Chef</h2>
+            <p>I'm an Italian chef currently working at a bistro in Barcelona, where I manage everything from daily prep and menu development to supplier relationships and cost control.</p>
+            <p>I grew up in Italy learning to cook the traditional way - from family, from other Italian cooks, through years of practice and refinement. When I teach Italian cooking, I'm sharing techniques that come from lived experience and cultural knowledge, not from reading cookbooks.</p>
+            <p>Now living in Barcelona, I bring both authentic Italian expertise and Mediterranean cooking knowledge. Whether you want to master traditional Italian dishes, understand Italian cooking philosophy, or learn how Italian and Spanish cuisines complement each other, I can help.</p>
+            <p><strong>When you want to learn Italian cooking, it makes sense to learn from an Italian chef who actually cooks Italian food professionally.</strong></p>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Students Say</h2>
+            <div class="testimonial">
+                "Finally, someone who could explain why my pasta dough kept tearing. It wasn't the recipe - it was technique. One session and I understood what I'd been doing wrong for years."
+                <div class="testimonial-author">— Sarah, Home Cook</div>
+            </div>
+            <div class="testimonial">
+                "As someone preparing for culinary school, getting insights from an actual Italian chef was invaluable. He explained not just how, but why - the cultural context behind the techniques."
+                <div class="testimonial-author">— Marco, Culinary Student</div>
+            </div>
+            <div class="testimonial">
+                "I'm Italian-American and grew up eating 'Italian' food that wasn't quite right. Learning the authentic techniques from someone who grew up in Italy has completely changed how I cook."
+                <div class="testimonial-author">— Giulia, Home Cook</div>
+            </div>
+        </section>
+
+        <section style="text-align: center; background: #f8f5f0; padding: 40px; border-radius: 8px; margin-bottom: 50px;">
+            <h2 style="color: #2d5016; margin-bottom: 20px;">Ready to Cook Like an Italian?</h2>
+            <p style="font-size: 1.1em; margin-bottom: 15px; color: #555;">Start with my free guide on essential Italian techniques</p>
+            <a href="mailto:your.email@example.com?subject=Send me the Italian Techniques Guide" class="cta-button" style="margin-right: 15px; margin-bottom: 15px;">Get Free Guide</a>
+            <a href="mailto:your.email@example.com?subject=Book Italian Cooking Consultation" class="cta-button">Book Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>📍 Italian Chef Based in Barcelona, Spain</p>
+            <p>🌐 Video consultations available worldwide</p>
+            <p>🇮🇹 Teaching authentic Italian cooking techniques</p>
+        </div>
+        <p style="margin-top: 30px; opacity: 0.8;">© 2026 Italian Chef Consulting</p>
+    </footer>
+</body>
+</html>
